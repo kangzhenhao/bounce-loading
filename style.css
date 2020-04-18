@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.logo {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  background-color: #1493F8;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.loading-bar {
+  position: relative;
+  width: 130px;
+  height: 2px;
+  margin-top: 22px;
+  background-color: #cfcfcf;
+  overflow: hidden;
+}
+
+.loading-bar::before {
+  position: absolute;
+  left: -34px;
+  content: "";
+  width: 68px;
+  height: 2px;
+  background-color: #1493F8;
+  animation: bluebar 1.5s infinite ease;
+}
+
+@keyframes bluebar {
+  50% {
+    left: 96px;
+  }
+}
